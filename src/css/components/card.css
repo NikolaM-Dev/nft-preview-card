@@ -1,0 +1,139 @@
+.container {
+  background-color: var(--bg-dark-blue);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .card {
+    max-width: toRem(326);
+    max-height: toRem(543);
+    background-color: var(--main-dark-blue);
+    border-radius: toRem(17);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: toRem(24);
+
+    .card__header {
+      position: relative;
+      cursor: pointer;
+      margin-bottom: toRem(22);
+
+      .header__hero {
+        border-radius: toRem(6);
+        width: toRem(279);
+        height: toRem(277);
+      }
+
+      .header__overlay {
+        background-color: var(--cyan);
+        transition: opacity 200ms ease-out;
+        border-radius: toRem(6);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        opacity: 0.4;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+
+      .header__view {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+
+      &:hover {
+        .header__overlay,
+        .header__view {
+          display: block;
+        }
+      }
+    }
+
+    .card__body {
+      .card__title {
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+          color: var(--cyan);
+        }
+      }
+
+      .card__description {
+        color: var(--soft-blue);
+        font-size: toRem(16);
+        margin-bottom: toRem(15);
+      }
+
+      .card__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .info__container {
+          display: flex;
+          align-items: center;
+
+          .info__icon {
+            margin-right: toRem(7);
+          }
+
+          .info__price {
+            color: var(--cyan);
+            font-weight: 600;
+          }
+
+          .info__time {
+            font-weight: 400;
+            color: var(--soft-blue);
+          }
+        }
+      }
+    }
+
+    .card__line {
+      width: 100%;
+      height: toRem(2);
+      background-color: var(--line-dark-blue);
+      margin: toRem(16) 0;
+    }
+
+    .card__footer {
+      display: flex;
+      width: 100%;
+      color: var(--soft-blue);
+
+      .footer__avatar {
+        width: toRem(33);
+        margin-right: toRem(15);
+        border: 1px solid var(--white);
+        border-radius: 50%;
+      }
+
+      .footer__created {
+        .footer__author {
+          color: var(--white);
+          font-weight: 400;
+          cursor: pointer;
+
+          &:hover {
+            color: var(--cyan);
+          }
+        }
+      }
+    }
+  }
+}
