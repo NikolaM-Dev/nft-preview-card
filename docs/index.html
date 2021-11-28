@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+  </head>
+  <body>
+    <main class="container">
+      <article class="card">
+        <header class="card__header">
+          <img
+            class="header__hero"
+            src="./assets/images/image-equilibrium.jpg"
+            alt="equilibrim"
+          />
+          <div class="header__overlay"></div>
+          <img
+            class="header__view"
+            src="./assets/images/icon-view.svg"
+            alt="ciew"
+          />
+        </header>
+        <div class="card__body">
+          <h1 class="card__title">Equilibrium #3429</h1>
+          <p class="card__description">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <div class="card__info">
+            <div class="info__container">
+              <img
+                src="./assets/images/icon-ethereum.svg"
+                alt="ethereum"
+                class="info__icon"
+              />
+              <p class="info__price">0.041 ETH</p>
+            </div>
+            <div class="info__container">
+              <img
+                src="./assets/images/icon-clock.svg"
+                alt="clock"
+                class="info__icon"
+              />
+              <p class="info__time">3 days left</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__line"></div>
+
+        <footer class="card__footer">
+          <img
+            src="./assets/images/image-avatar.png"
+            alt="avatar"
+            class="footer__avatar"
+          />
+          <p class="footer__created">
+            Creation of <strong class="footer__author">Jules Wyvern</strong>
+          </p>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
